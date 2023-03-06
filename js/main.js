@@ -7,7 +7,7 @@
 const Quiz = [
     {   index: 0,
         content: "Welcome. You have been invited to participate in the javascript quiz game. In this game you will only have one chance to get through 3 questions. Any wrong answers shall result in you being terminated. Good luck and enjoy the game.",
-        answers: [1,2,3,4] //display shapes i think
+        answers: [1,2,3,4] //display shapes for initial screen
     },
 
     {   index: 1,

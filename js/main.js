@@ -44,18 +44,23 @@ const Quiz = [{
     //let buttons (not sure if i should keep displayed at all times)
 
   /*----- cached elements  -----*/
+   let i = 1
    let display = document.getElementById('CONTENT')
    let answer1 = document.getElementById('a')
    let answer2 = document.getElementById('b')
    let answer3 = document.getElementById('c')
    let answer4 = document.getElementById('d')
+   let button = document.getElementsByClassName('buttons')
 
 
   /*----- event listeners -----*/
-    //code event listener for the button div 
+ //code event listener for the button div 
+ 
     //code event listener for the navbar
 
-
+ function hi() {
+    console.log('pressed')
+ }   
   /*----- functions -----*/
  init ();
 // 3. create function that checks if player is correct
@@ -65,14 +70,12 @@ function init() {
 renderInitial ();
 }
 
+
 //need function that iterates through quiz array when true is clicked
 function iterateQ () {
-    for (let i = 1; i < Quiz.length; i++){
-        //create condition if click event = true 
-            renderQuestion(i)
-    }
-    
+    renderQuestion(i++)
 }
+
     
 
 

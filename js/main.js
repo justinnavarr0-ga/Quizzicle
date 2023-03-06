@@ -2,31 +2,33 @@
   //maybe put some music ??
   //1. create questions for game as objects 
 
-const Quiz = [
-    {   index: 0,
-        content: "Welcome. You have been invited to participate in the javascript quiz game. In this game you will only have one chance to get through 3 questions. Any wrong answers shall result in you being terminated. Good luck and enjoy the game.",
-        answers: ["square","circle","triangle","x"] //display shapes for initial screen
-    },
+const outcomes = [
 
-    {   index: 1,
-        content: "Question 1",
-        answers: [1,2,3,4]
-    },
-    {   index: 2,
-        content: "Question 2",
-        answers: [1,2,3,4]
-    },
-    {   index: 3,
-        content: "Question 3",
-        answers: [1,2,3,4]
-    },
-    {  index: 4,
+    {  index: 1,
         content: "Congratulations, you won!!! Heres ur prize money"
     },
-    {  index: 5,
+    {  index: 2,
         content: "Unfortunately, you chose the wrong answer. You will now be terminated"
     }
 ];
+const Quiz = [{
+    index: 0,
+    content: "Welcome. You have been invited to participate in the javascript quiz game. In this game you will only have one chance to get through 3 questions. Any wrong answers shall result in you being terminated. Good luck and enjoy the game.",
+    answers: ["square","circle","triangle","x"] 
+    }, //display shapes for initial screen
+    {   index: 1,
+        content: "Question 1",
+        answers: [false,true,false,false]
+    },
+    {   index: 2,
+        content: "Question 2",
+        answers: [true,false,false,false]
+    },
+    {   index: 3,
+        content: "Question 3",
+        answers: [false,false,false,true]
+    },
+]
 
   /*----- state variables -----*/
   //2. identify games variables
@@ -35,12 +37,13 @@ const Quiz = [
   //object key p is player score / c for computer
   //players key will be questions right computers will be questions left
     // answers boolean 1 true/ 3 false
+    // if false return to initial
   //let winner; //p-score = 3 means player wins. p-score < 3 is loss
 
     //let buttons (not sure if i should keep displayed at all times)
 
   /*----- cached elements  -----*/
-   let display = document.getElementById('QUESTION')
+   let display = document.getElementById('CONTENT')
    let answer1 = document.getElementById('a')
    let answer2 = document.getElementById('b')
    let answer3 = document.getElementById('c')
@@ -68,27 +71,20 @@ function renderInitial () {
     answer4.innerHTML = Quiz[0].answers[3]
 }
 
-function renderQuestion () {
-    display.innerHTML = Quiz[0].content 
-    answer1.innerHTML = Quiz[0].answers[0]
-    answer2.innerHTML = Quiz[0].answers[1]
-    answer3.innerHTML = Quiz[0].answers[2]
-    answer4.innerHTML = Quiz[0].answers[3]
+function renderQuestion1 () {
+    display.innerHTML = Quiz[1].content 
+    answer1.innerHTML = Quiz[1].answers[0]
+    answer2.innerHTML = Quiz[1].answers[1]
+    answer3.innerHTML = Quiz[1].answers[2]
+    answer4.innerHTML = Quiz[1].answers[3]
 }
 
 function renderLoss () {
-    display.innerHTML = Quiz[5].content 
-    answer1.innerHTML = Quiz[0].answers[0]
-    answer2.innerHTML = Quiz[0].answers[1]
-    answer3.innerHTML = Quiz[0].answers[2]
-    answer4.innerHTML = Quiz[0].answers[3]
+    display.innerHTML = outcomes[2].content 
 }
 function renderWin () {
-    display.innerHTML = Quiz[4].content 
-    answer1.innerHTML = Quiz[0].answers[0]
-    answer2.innerHTML = Quiz[0].answers[1]
-    answer3.innerHTML = Quiz[0].answers[2]
-    answer4.innerHTML = Quiz[0].answers[3]
+    display.innerHTML = outcomes[1].content 
+
 }
 
 function render() {
@@ -101,6 +97,6 @@ function render() {
 
 //iterate through the question objects function if question answered correctly if not set player points to 0 and you lose and have to restart? 
 
-//possible interval for inbetween screens 
+//possible interval for inbetween screens using setinterval
 
 //update display if you lose

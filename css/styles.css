@@ -30,7 +30,7 @@ main {
     background-color: blue;
 }
 
-#QUESTION {
+#CONTENT {
     display: flex;
     justify-content: center;
     align-items: center;

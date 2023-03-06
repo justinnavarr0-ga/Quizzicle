@@ -38,6 +38,7 @@ const Quiz = [{
   //players key will be questions right computers will be questions left
     // answers boolean 1 true/ 3 false
     // if false return to initial
+    //if true iterateQ
   //let winner; //p-score = 3 means player wins. p-score < 3 is loss
 
     //let buttons (not sure if i should keep displayed at all times)
@@ -54,6 +55,7 @@ const Quiz = [{
     //code event listener for the button div 
     //code event listener for the navbar
 
+
   /*----- functions -----*/
  init ();
 // 3. create function that checks if player is correct
@@ -63,6 +65,18 @@ function init() {
 renderInitial ();
 }
 
+//need function that iterates through quiz array when true is clicked
+function iterateQ () {
+    for (let i = 1; i < Quiz.length; i++){
+        //create condition if click event = true 
+            renderQuestion(i)
+    }
+    
+}
+    
+
+
+
 function renderInitial () {
     display.innerHTML = Quiz[0].content 
     answer1.innerHTML = Quiz[0].answers[0]
@@ -71,12 +85,12 @@ function renderInitial () {
     answer4.innerHTML = Quiz[0].answers[3]
 }
 
-function renderQuestion1 () {
-    display.innerHTML = Quiz[1].content 
-    answer1.innerHTML = Quiz[1].answers[0]
-    answer2.innerHTML = Quiz[1].answers[1]
-    answer3.innerHTML = Quiz[1].answers[2]
-    answer4.innerHTML = Quiz[1].answers[3]
+function renderQuestion (i) {
+    display.innerHTML = Quiz[i].content 
+    answer1.innerHTML = Quiz[i].answers[0]
+    answer2.innerHTML = Quiz[i].answers[1]
+    answer3.innerHTML = Quiz[i].answers[2]
+    answer4.innerHTML = Quiz[i].answers[3]
 }
 
 function renderLoss () {

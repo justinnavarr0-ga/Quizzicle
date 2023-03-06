@@ -6,7 +6,9 @@
 
 const Quiz = [
     {   index: 0,
-        content: "Welcome. You have been invited to participate in the javascript quiz game. In this game you will only have one chance to get through 3 questions. Any wrong answers shall result in you being terminated. Good luck and enjoy the game."},
+        content: "Welcome. You have been invited to participate in the javascript quiz game. In this game you will only have one chance to get through 3 questions. Any wrong answers shall result in you being terminated. Good luck and enjoy the game.",
+        answers: [1,2,3,4] //display shapes i think
+    },
 
     {   index: 1,
         content: "Question 1",
@@ -40,6 +42,11 @@ const Quiz = [
     //let buttons (not sure if i should keep displayed at all times)
 
   /*----- cached elements  -----*/
+   let display = document.getElementById('QUESTION')
+   let answer1 = document.getElementById('a')
+   let answer2 = document.getElementById('b')
+   let answer3 = document.getElementById('c')
+   let answer4 = document.getElementById('d')
 
 
   /*----- event listeners -----*/
@@ -55,7 +62,11 @@ function init() {
 //     p: 0,
 //     c: 3
 // }; 
-document.getElementById('QUESTION').innerHTML = Quiz[0].content 
+display.innerHTML = Quiz[0].content 
+answer1.innerHTML = Quiz[0].answers[0]
+answer2.innerHTML = Quiz[0].answers[1]
+answer3.innerHTML = Quiz[0].answers[2]
+answer4.innerHTML = Quiz[0].answers[3]
 
 questions = [
     //display instruction object question and render it

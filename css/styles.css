@@ -37,6 +37,10 @@ main {
     padding: 200px;
 }
 
+#text {
+    background-color: ta;
+}
+
 div.buttons {
     margin: 10px auto;
     padding: 10px;

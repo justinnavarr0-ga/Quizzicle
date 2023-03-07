@@ -7,7 +7,7 @@
    let answer2 = document.getElementById('b')
    let answer3 = document.getElementById('c')
    let answer4 = document.getElementById('d')
-   let correctAnswer = document.getElementById('buttons')
+   let buttons = document.getElementById('buttons')
    let START = document.getElementById('START')
    
 
@@ -23,18 +23,18 @@ const Quiz = [{
     }, //display shapes for initial screen
     {   index: 1,
         content: "Question 1",
-        answers: [false,true,false,false],
-        correctAnswer: answer2
+        answers: [{text: "square", rightAnswer:false},{text: "circle", rightAnswer: true},{text: "triangle", rightAnswer:false},{text: "x", rightAnswer:false}],
+        
     },
     {   index: 2,
         content: "Question 2",
-        answers: [true,false,false,false],
-        correctAnswer: answer1
+        answers: [{text: "square", rightAnswer:false},{text: "circle", rightAnswer: true},{text: "triangle", rightAnswer:false},{text: "x", rightAnswer:false}],
+        
     },
     {   index: 3,
         content: "Question 3",
-        answers: [false,false,false,true],
-        correctAnswer: answer4
+        answers: [{text: "square", rightAnswer:false},{text: "circle", rightAnswer: true},{text: "triangle", rightAnswer:false},{text: "x", rightAnswer:false}],
+        
     },
     {  index: 4,
         content: "Congratulations, you won!!! Heres ur prize money"
@@ -43,14 +43,11 @@ const Quiz = [{
 
   /*----- state variables -----*/
   //2. identify games variables
-  //player will get 1 life to get through three questions 
-    let score; // player score will be 0 and computer will start at 3 points. points basically look like they transfer to player as so when computer reaches 0 player wins
-  //object key p is player score / c for computer
-  //players key will be questions right computers will be questions left
     // answers boolean 1 true/ 3 false
-    // if false return to initial
-    //if true iterateQ
-  //let winner; //p-score = 3 means player wins. p-score < 3 is loss
+    answer1.value = Quiz[i].answers[0].rightAnswer
+    answer2.value = Quiz[i].answers[1].rightAnswer
+    answer3.value = Quiz[i].answers[2].rightAnswer
+    answer4.value = Quiz[i].answers[3].rightAnswer
 
     //let buttons (not sure if i should keep displayed at all times)
 
@@ -61,7 +58,7 @@ const Quiz = [{
  //code event listener for the button div 
 
  START.addEventListener('click', Start)
- correctAnswer.addEventListener('click', iterateQ)
+ buttons.addEventListener('click', handleClick)
  
   /*----- functions -----*/
  init ();
@@ -74,22 +71,24 @@ renderInitial ();
 
 function Start() {
     display.innerHTML = Quiz[1].content 
-    answer1.innerHTML = Quiz[1].answers[0]
-    answer2.innerHTML = Quiz[1].answers[1]
-    answer3.innerHTML = Quiz[1].answers[2]
-    answer4.innerHTML = Quiz[1].answers[3]
+    answer1.innerHTML = Quiz[1].answers[0].text
+    answer2.innerHTML = Quiz[1].answers[1].text
+    answer3.innerHTML = Quiz[1].answers[2].text
+    answer4.innerHTML = Quiz[1].answers[3].text
     START.style.display = "none";
     i++;
  }   
 //need function that iterates through quiz array when true is clicked
 function iterateQ () {
-    renderQuestion(i++)
+       renderQuestion(i++) 
 }
     
 function handleClick () {
     //if answer true continue by iterateQ //else render initial 
-    if (buttons.innerHTML === true) {
+    if (Quiz[i].answers.rightAnswer == true) {
         iterateQ();
+    }else{
+        renderLoss();
     }
 }
 

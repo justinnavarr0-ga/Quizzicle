@@ -74,6 +74,7 @@ function Start() {
     answer2.innerHTML = Quiz[1].answers[1]
     answer3.innerHTML = Quiz[1].answers[2]
     answer4.innerHTML = Quiz[1].answers[3]
+    START.style.display = "none";
  }   
 //need function that iterates through quiz array when true is clicked
 function iterateQ () {

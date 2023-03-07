@@ -37,11 +37,12 @@ main {
     padding: 200px;
 }
 
-#text {
-    background-color: ta;
+#START {
+    background-color: pink;
+    margin-top: 50px;
 }
 
-div.buttons {
+#buttons {
     margin: 10px auto;
     padding: 10px;
     display: grid;

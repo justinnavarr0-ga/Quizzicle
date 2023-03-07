@@ -3,7 +3,7 @@
   //1. create questions for game as objects 
 
 const outcomes = [
-    {  index: 2,
+    {  index: 0,
         content: "Unfortunately, you chose the wrong answer. You will now be terminated"
     }
 ];
@@ -49,15 +49,15 @@ const Quiz = [{
    let answer2 = document.getElementById('b')
    let answer3 = document.getElementById('c')
    let answer4 = document.getElementById('d')
-   let buttons = document.getElementsByClassName('buttons')
+   let buttons = document.getElementById('buttons')
    let START = document.getElementById('START')
 
 
   /*----- event listeners -----*/
  //code event listener for the button div 
- START.addEventListener('click', Start)
-    //code event listener for the navbar
 
+ START.addEventListener('click', Start)
+ buttons.addEventListener('click', handleClick)
  
   /*----- functions -----*/
  init ();
@@ -75,13 +75,19 @@ function Start() {
     answer3.innerHTML = Quiz[1].answers[2]
     answer4.innerHTML = Quiz[1].answers[3]
     START.style.display = "none";
+    i++;
  }   
 //need function that iterates through quiz array when true is clicked
 function iterateQ () {
     renderQuestion(i++)
 }
     
-
+function handleClick () {
+    //if answer true continue by iterateQ //else render initial 
+    if (buttons.value === [true]) {
+        iterateQ();
+    }
+}
 
 
 function renderInitial () {
@@ -102,10 +108,10 @@ function renderQuestion (i) {
 }
 
 function renderLoss () {
-    display.innerHTML = outcomes[2].content 
+    display.innerHTML = outcomes[0].content 
 }
 function renderWin () {
-    display.innerHTML = outcomes[1].content 
+    display.innerHTML = Quiz[4].content 
 
 }
 

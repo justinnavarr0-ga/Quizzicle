@@ -1,6 +1,15 @@
   /*----- constants -----*/
   //maybe put some music ??
   //1. create questions for game as objects 
+  let i = 1
+   let display = document.getElementById('CONTENT')
+   let answer1 = document.getElementById('a')
+   let answer2 = document.getElementById('b')
+   let answer3 = document.getElementById('c')
+   let answer4 = document.getElementById('d')
+   let correctAnswer = document.getElementById('buttons')
+   let START = document.getElementById('START')
+   
 
 const outcomes = [
     {  index: 0,
@@ -14,15 +23,18 @@ const Quiz = [{
     }, //display shapes for initial screen
     {   index: 1,
         content: "Question 1",
-        answers: [false,true,false,false]
+        answers: [false,true,false,false],
+        correctAnswer: answer2
     },
     {   index: 2,
         content: "Question 2",
-        answers: [true,false,false,false]
+        answers: [true,false,false,false],
+        correctAnswer: answer1
     },
     {   index: 3,
         content: "Question 3",
-        answers: [false,false,false,true]
+        answers: [false,false,false,true],
+        correctAnswer: answer4
     },
     {  index: 4,
         content: "Congratulations, you won!!! Heres ur prize money"
@@ -43,21 +55,13 @@ const Quiz = [{
     //let buttons (not sure if i should keep displayed at all times)
 
   /*----- cached elements  -----*/
-   let i = 1
-   let display = document.getElementById('CONTENT')
-   let answer1 = document.getElementById('a')
-   let answer2 = document.getElementById('b')
-   let answer3 = document.getElementById('c')
-   let answer4 = document.getElementById('d')
-   let buttons = document.getElementById('buttons')
-   let START = document.getElementById('START')
-
+ 
 
   /*----- event listeners -----*/
  //code event listener for the button div 
 
  START.addEventListener('click', Start)
- buttons.addEventListener('click', handleClick)
+ correctAnswer.addEventListener('click', iterateQ)
  
   /*----- functions -----*/
  init ();
@@ -84,19 +88,20 @@ function iterateQ () {
     
 function handleClick () {
     //if answer true continue by iterateQ //else render initial 
-    if (buttons.value === [true]) {
+    if (buttons.innerHTML === true) {
         iterateQ();
     }
 }
 
 
 function renderInitial () {
-    let i = 0
+    let i = 1
     display.innerHTML = Quiz[0].content 
     answer1.innerHTML = Quiz[0].answers[0]
     answer2.innerHTML = Quiz[0].answers[1]
     answer3.innerHTML = Quiz[0].answers[2]
     answer4.innerHTML = Quiz[0].answers[3]
+    START.style.display = "flex"
 }
 
 function renderQuestion (i) {

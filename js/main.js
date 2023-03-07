@@ -3,10 +3,6 @@
   //1. create questions for game as objects 
 
 const outcomes = [
-
-    {  index: 1,
-        content: "Congratulations, you won!!! Heres ur prize money"
-    },
     {  index: 2,
         content: "Unfortunately, you chose the wrong answer. You will now be terminated"
     }
@@ -28,6 +24,9 @@ const Quiz = [{
         content: "Question 3",
         answers: [false,false,false,true]
     },
+    {  index: 4,
+        content: "Congratulations, you won!!! Heres ur prize money"
+    }
 ]
 
   /*----- state variables -----*/
@@ -50,17 +49,16 @@ const Quiz = [{
    let answer2 = document.getElementById('b')
    let answer3 = document.getElementById('c')
    let answer4 = document.getElementById('d')
-   let button = document.getElementsByClassName('buttons')
+   let buttons = document.getElementsByClassName('buttons')
+   let START = document.getElementById('START')
 
 
   /*----- event listeners -----*/
  //code event listener for the button div 
- 
+ START.addEventListener('click', Start)
     //code event listener for the navbar
 
- function hi() {
-    console.log('pressed')
- }   
+ 
   /*----- functions -----*/
  init ();
 // 3. create function that checks if player is correct
@@ -70,17 +68,23 @@ function init() {
 renderInitial ();
 }
 
-
+function Start() {
+    display.innerHTML = Quiz[1].content 
+    answer1.innerHTML = Quiz[1].answers[0]
+    answer2.innerHTML = Quiz[1].answers[1]
+    answer3.innerHTML = Quiz[1].answers[2]
+    answer4.innerHTML = Quiz[1].answers[3]
+ }   
 //need function that iterates through quiz array when true is clicked
 function iterateQ () {
     renderQuestion(i++)
 }
-
     
 
 
 
 function renderInitial () {
+    let i = 0
     display.innerHTML = Quiz[0].content 
     answer1.innerHTML = Quiz[0].answers[0]
     answer2.innerHTML = Quiz[0].answers[1]

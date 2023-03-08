@@ -6,11 +6,12 @@
    let START = document.getElementById('START')
    let RESTART = document.getElementById('RESTART')
    let buttons = document.getElementById('buttons')
-   let choicesArray;
-   let buttonEl;
 
 
-const outcomes = [{content: "Unfortunately, you chose the wrong answer. You will now be terminated"}];
+
+const outcomes = [  {content: "Unfortunately, you chose the wrong answer. You will now be terminated"},
+                    {content: "Congratulations, you won!!! Heres ur prize money"}
+                 ];
 
 
 var currentQuestion = 0
@@ -34,8 +35,35 @@ const questions = [{
         answer: "hi"
     },
     {
-        content: "Congratulations, you won!!! Heres ur prize money"
-    }
+        content: "This is question 3",
+        choices: ["hi","nah","triangle","xxxxxxx"],
+        answer: "hi"
+    },
+    {
+        content: "This is question 3",
+        choices: ["hi","nah","triangle","xxxxxxx"],
+        answer: "hi"
+    },
+    {
+        content: "This is question 3",
+        choices: ["hi","nah","triangle","xxxxxxx"],
+        answer: "hi"
+    },
+    {
+        content: "This is question 3",
+        choices: ["hi","nah","triangle","xxxxxxx"],
+        answer: "hi"
+    },
+    {
+        content: "This is question 3",
+        choices: ["hi","nah","triangle","xxxxxxx"],
+        answer: "hi"
+    },
+    {
+        content: "This is question 3",
+        choices: ["hi","nah","triangle","xxxxxxx"],
+        answer: "hi"
+    },
 ]
 
   /*----- event listeners -----*/
@@ -78,10 +106,11 @@ function renderQuestion () {
             let answer = questions[currentQuestion].answer
             if (choice === answer){
                 iterateQ();
-            } else if (currentQuestion != 4) {
-                renderLoss()
+                if (currentQuestion + 1 >= (questions.length)){
+                    renderWin()
+                }
             } else {
-                renderWin()
+                renderLoss()
             }
         })
         
@@ -112,9 +141,10 @@ function renderLoss () {
     
 }
 function renderWin () {
-    display.innerHTML = questions[4].content;
+    display.innerHTML = outcomes[1].content;
     RESTART.style.display = "flex"
     START.style.display = "none"
+    buttons.style.display = "none"
 }
 
 function render() {

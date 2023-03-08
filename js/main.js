@@ -6,7 +6,7 @@
    let START = document.getElementById('START')
    let RESTART = document.getElementById('RESTART')
    let buttons = document.getElementById('buttons')
-
+   let currentQuestion = 0
 
 
 const outcomes = [  {content: "Unfortunately, you chose the wrong answer. You will now be terminated"},
@@ -14,56 +14,66 @@ const outcomes = [  {content: "Unfortunately, you chose the wrong answer. You wi
                  ];
 
 
-var currentQuestion = 0
+
 const questions = [{
     content: "Welcome. You have been invited to participate in the javascript questions game. In this game you will only have one chance to get through 3 questions. Any wrong answers shall result in you being terminated. Good luck and enjoy the game.",
     choices: ["square","right answer","triangle","xxxxxxx"],
-    }, //display shapes for initial screen
+    }, 
     {
-        content: "This is question 1",
-        choices: ["square","right answer","triangle","xxxxxxx"],
-        answer: "right answer"
+        content: "Which of the following is NOT a primitive data type?",
+        choices: ["Boolean", "Null","Undefined", "Array"],
+        answer: "Array"
     },
     {
-        content: "This is question 2",
-        choices: ["square","circle","this one","xxxxxxx"],
-        answer: "this one"
+        content: "Which of the following is NOT an Object?",
+        choices: ["Date","String","Function","Error"],
+        answer: "String"
     },
     {
-        content: "This is question 3",
-        choices: ["hi","nah","triangle","xxxxxxx"],
-        answer: "hi"
+        content: "An object is a collection of zero or more...",
+        choices: ["properties","methods"],
+        answer: "properties"
     },
     {
-        content: "This is question 3",
-        choices: ["hi","nah","triangle","xxxxxxx"],
-        answer: "hi"
+        content: "What type of for loop is used to iterate over the keys of an object?",
+        choices: ["forEach","for...in","for...you","Wendys Four for 4"],
+        answer: "for...in"
     },
     {
-        content: "This is question 3",
-        choices: ["hi","nah","triangle","xxxxxxx"],
-        answer: "hi"
+        content: "What can Classes be used for in OOP?",
+        choices: ["create objects","school","Whats OOP?","to learn"],
+        answer: "create objects"
     },
     {
-        content: "This is question 3",
-        choices: ["hi","nah","triangle","xxxxxxx"],
-        answer: "hi"
+        content: "What is the process of creating an object?",
+        choices: ["instantiation","instantiate","instance","instant oatmeal"],
+        answer: "instantiation"
     },
     {
-        content: "This is question 3",
-        choices: ["hi","nah","triangle","xxxxxxx"],
-        answer: "hi"
+        content: "What is an object created by a class",
+        choices: ["instantiation","instantiate","instance","instant oatmeal"],
+        answer: "instance"
     },
     {
-        content: "This is question 3",
-        choices: ["hi","nah","triangle","xxxxxxx"],
-        answer: "hi"
+        content: "The ______ method can only be called on the class itself",
+        choices: ["Prototype", "Static","callback"],
+        answer: "Static"
     },
     {
-        content: "This is question 3",
-        choices: ["hi","nah","triangle","xxxxxxx"],
-        answer: "hi"
+        content: "The ________ method can only be called on an instance of the class",
+        choices: ["Static","Prototype","callback"],
+        answer: "Prototype"
     },
+    {
+        content: "The BEST INSTRUCTOR IS.....",
+        choices: ["Kenneth","Matthew","Payne", "Evan", "They are all great!!!", "None of them"],
+        answer: "They are all great!!!"
+    },
+    {
+        content: "The BEST INSTRUCTOR IS.....",
+        choices: ["Kenneth","Matthew","Payne", "Evan", "They are all great!!!", "None of them"],
+        answer: "They are all great!!!"
+    }
 ]
 
   /*----- event listeners -----*/
@@ -71,8 +81,6 @@ const questions = [{
 
  START.addEventListener('click', renderQuestion)
  RESTART.addEventListener('click', init)
-
-
  
   /*----- functions -----*/
  init ();
@@ -88,7 +96,6 @@ function iterateQ () {
     buttons.innerHTML = ""
     renderQuestion(currentQuestion)
 }
-
 
 function renderQuestion () {
     currentQuestion = currentQuestion + 1
@@ -145,11 +152,4 @@ function renderWin () {
     RESTART.style.display = "flex"
     START.style.display = "none"
     buttons.style.display = "none"
-}
-
-function render() {
-    renderInitial ();
-    renderQuestion ();
-    renderLoss ();
-    renderWin ();
 }

@@ -51,7 +51,8 @@ const questions = [{
 
 // create initialize function (make sure its called)
 function init() {
-renderInitial ();
+    currentQuestion = 0
+    renderInitial ();
 }
 
 //need function that iterates through questions array when true is clicked

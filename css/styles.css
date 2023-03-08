@@ -37,10 +37,11 @@ main {
     padding: 200px;
 }
 
-#START {
+#START, #RESTART {
     background-color: pink;
     margin-top: 50px;
 }
+
 
 #buttons {
     margin: 10px auto;

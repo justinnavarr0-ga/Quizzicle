@@ -13,11 +13,8 @@ The only way to win is to answer correctly on the first try.
 
 *Quiz questions and answers will **not** change throughout the entirety of the quiz.*
 
-
-
-##
-
 ## **Game Rules:**
+
  In this game you will only have one chance to get through X-AMOUNT of questions.
  
  User must select one of the provided answers. 
@@ -29,6 +26,7 @@ The only way to win is to answer correctly on the first try.
  The quiz game is won by answering all questions correctly.
 
  ## Gameplay: 
+ 
  **Initial Startup Screen:**
  
  ![Startup PROJECT 1 GIF](https://user-images.githubusercontent.com/107282884/224135780-5098a53a-aa7e-4529-a760-44ba5763ad3a.gif)
@@ -81,7 +79,7 @@ I realized it would be easier to compare the values of Strings to one another.
 
 This ended up being a better way to code it because it was simple and cleaner. Also if you were to inspect the game using code from the first code block, you would be able to find out the answer to the question, which defeats the purpose of the game.
 
-##
+## 
 
 Another problem I faced when writing this code was I tried to add an event listener and its function outside of this renderQuestion function because I was trying to group my eventListeners all together.
 
@@ -141,7 +139,7 @@ Icebox features planned for the near future:
 
 ## Contributing:
 
-Feel free to use this themed quiz code and alter the questions to fit your needs. 
+Feel free to use this SQUID GAMES themed quiz code and alter the questions to fit your needs. 
 
 ## Authors and Acknowledgements
 

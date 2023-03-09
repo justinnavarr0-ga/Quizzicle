@@ -6,17 +6,18 @@
    let START = document.getElementById('START')
    let RESTART = document.getElementById('RESTART')
    let buttons = document.getElementById('buttons')
+   let LOSE = document.getElementById("LOSE")
    let currentQuestion = 0
 
 
-const outcomes = [  {content: "Unfortunately, you chose the wrong answer. You will now be terminated"},
+const outcomes = [  {content: "WRONG ANSWER"},
                     {content: "Congratulations, you won!!! Heres ur prize money"}
                  ];
 
 
 
 const questions = [{
-    content: "Welcome. You have been invited to participate in the javascript questions game. In this game you will only have one chance to get through 3 questions. Any wrong answers shall result in you being terminated. Good luck and enjoy the game.",
+    content: "You have been invited to participate in The SQUI- i mean The JAVASCRIPT QUIZ game. In this game you will only have one chance to get through a series of questions. Any wrong answers shall result in you being  immediately terminated. The reward is extremely valuable Javascript knowledge that will help you for years to come. Press the invitation if you dare.",
     choices: ["square","right answer","triangle","xxxxxxx"],
     }, 
     {
@@ -50,17 +51,17 @@ const questions = [{
         answer: "instantiation"
     },
     {
-        content: "What is an object created by a class",
+        content: "What is an object created by a class?",
         choices: ["instantiation","instantiate","instance","instant oatmeal"],
         answer: "instance"
     },
     {
-        content: "The ______ method can only be called on the class itself",
+        content: "The ______ method can only be called on the class itself.",
         choices: ["Prototype", "Static","callback"],
         answer: "Static"
     },
     {
-        content: "The ________ method can only be called on an instance of the class",
+        content: "The ________ method can only be called on an instance of the class.",
         choices: ["Static","Prototype","callback"],
         answer: "Prototype"
     },
@@ -89,6 +90,7 @@ const questions = [{
 function init() {
     currentQuestion = 0
     renderInitial ();
+
 }
 
 //need function that iterates through questions array when true is clicked
@@ -138,6 +140,7 @@ function renderInitial () {
     START.style.display = "flex"
     RESTART.style.display = "none"
     buttons.style.display = "none"
+    LOSE.style.display = "none"
 }
 
 function renderLoss () {
@@ -145,7 +148,7 @@ function renderLoss () {
     START.style.display = "none"
     RESTART.style.display = "flex"
     buttons.style.display = "none"
-    
+    LOSE.style.display = "flex"
 }
 function renderWin () {
     display.innerHTML = outcomes[1].content;

@@ -1,5 +1,6 @@
-# Quizzicle
-**Objective:**
+![FIRST GITHUB GAME LOGO](https://user-images.githubusercontent.com/107282884/224125728-d765cc27-9ec1-4801-8319-fa35ef3f00c0.png)
+
+**Objective**
  This is a quiz game implemented using the basic fundamentals of HTML, CSS and JavaScript. 
  In order to understand how this quiz game is played, below is the description.
 

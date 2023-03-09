@@ -162,6 +162,7 @@ background-color: #020202; left: 90%; animation-delay: -3.5s;
 
 /* found this cool code to fade items too */
 /* https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ */
+
 #START {
     animation: fadeInAnimation ease-in 15s;
     animation-iteration-count: 1;

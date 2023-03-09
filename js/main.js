@@ -13,7 +13,7 @@
                  ];
 
     const questions = [{
-    content: "Your invitation will be ariving shortly."
+    content: "Your invitation will be arriving shortly."
     }, 
     {
     content: "You have been chosen to participate in The SQUI- i mean The JAVASCRIPT QUIZ game.",

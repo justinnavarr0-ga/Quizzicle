@@ -31,5 +31,7 @@ The only way to win is to answer correctly on the first try.
  The quiz game is won by answering all questions correctly.
 
  ## Gameplay
+ **Initial Startup Screen**
+ ![Startup PROJECT 1 GIF](https://user-images.githubusercontent.com/107282884/224135780-5098a53a-aa7e-4529-a760-44ba5763ad3a.gif)
 
 

@@ -49,7 +49,7 @@ One of the first problems I encountered writing this code was with the structure
 
 Initially I structured my questions to be like this:
 
-```
+```js
 {
     content: "Which of the following choices is NOT a primitive data type?",
     choices:[
@@ -69,7 +69,7 @@ I realized it would be easier to compare the values of Strings to one another.
 
 **I ended up structuring the questions like this:**
 
-```
+```js
 {
     content: "Which of the following choices is NOT a primitive data type?",
     choices: ["Boolean", "Null","Undefined", "Array"],
@@ -87,7 +87,7 @@ However, I realized I could not reference back to the values of the elements ins
 
 It took me a while to realize I had to code the eventListener function inside the  renderQuestion function since the variables I used to compare the answers and choices were inside of the renderQuestion function which was creating those same buttons.  
 
-```
+```js
 function renderQuestion () {
     currentQuestion = currentQuestion + 1
     display.innerHTML = questions[currentQuestion].content

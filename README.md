@@ -1,4 +1,4 @@
-![FIRST GITHUB GAME LOGO](https://user-images.githubusercontent.com/107282884/224125728-d765cc27-9ec1-4801-8319-fa35ef3f00c0.png)
+![a6696fe73975df391bc9af9871588865](https://user-images.githubusercontent.com/107282884/224126307-ecb20668-dc32-43a3-b502-032377383f9f.png)
 
 **Objective**
  This is a quiz game implemented using the basic fundamentals of HTML, CSS and JavaScript. 

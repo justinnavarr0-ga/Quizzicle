@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![a6696fe73975df391bc9af9871588865](https://user-images.githubusercontent.com/107282884/224126307-ecb20668-dc32-43a3-b502-032377383f9f.png)
 **Objective**
  This is a quiz game implemented using the basic fundamentals of HTML, CSS and JavaScript. 
@@ -7,7 +6,6 @@
 ## **Game Description:**
 
 This is a quiz game implemented by using the fundamentals of HTML, CSS and JavaScript.
->>>>>>> 2bad090 (Finished CSS Styling)
 
 Player will be given a series of questions related to JavaScript and must identify the correct answer to each one. 
 
@@ -30,8 +28,9 @@ The only way to win is to answer correctly on the first try.
 
  The quiz game is won by answering all questions correctly.
 
- ## Gameplay
+ ## Gameplay: 
  **Initial Startup Screen**
+ 
  ![Startup PROJECT 1 GIF](https://user-images.githubusercontent.com/107282884/224135780-5098a53a-aa7e-4529-a760-44ba5763ad3a.gif)
 
 

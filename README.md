@@ -1,6 +1,4 @@
 ![a6696fe73975df391bc9af9871588865](https://user-images.githubusercontent.com/107282884/224126307-ecb20668-dc32-43a3-b502-032377383f9f.png)
-https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
-
 **Objective**
  This is a quiz game implemented using the basic fundamentals of HTML, CSS and JavaScript. 
  In order to understand how this quiz game is played, below is the description.

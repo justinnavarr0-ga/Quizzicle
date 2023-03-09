@@ -26,12 +26,18 @@ The only way to win is to answer correctly on the first try.
  The quiz game is won by answering all questions correctly.
 
  ## Gameplay: 
- **Initial Startup Screen**
+ **Initial Startup Screen:**
  
  ![Startup PROJECT 1 GIF](https://user-images.githubusercontent.com/107282884/224135780-5098a53a-aa7e-4529-a760-44ba5763ad3a.gif)
+ 
+ **Question 1 Screen:**
 
 
-**Winning Screen**
+**Losing Screen:**
+
+![Screenshot 2023-03-09 at 12 05 23 PM](https://user-images.githubusercontent.com/107282884/224142105-c8fd7562-64fc-45be-a508-15517a9aebd3.png)
+
+**Winning Screen:**
 
  ![FINISHED GAMEPLAY (WIN)](https://user-images.githubusercontent.com/107282884/224140573-1fcdec76-b9b3-490d-b2bd-4dd76b4c42c4.gif)
 

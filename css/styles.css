@@ -6,14 +6,9 @@
 #navbar {
     display: flex;
     justify-content: center;
-    
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
+h1, h2 {
     text-align: center;
 }
 
@@ -34,10 +29,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px;
-    font-size: 60px;
+    padding: 30px;
+    font-size: larger;
     text-align: center;
-    
 }
 
 #START {
@@ -49,19 +43,18 @@ main {
     background-position: center;
     height: 5rem;
     width: 9rem;
+    border-radius: 0;
+    transition-duration: 3s; 
 }
 
-
 #buttons {
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
     display: grid;
     grid-template-columns: auto auto;
     grid-row: auto auto;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     justify-content: center;
-    border-radius: 25px;
 }
 button {
     display: flex;
@@ -71,6 +64,7 @@ button {
     padding: 10px;
     background-color: rgb(73, 160, 120);
     color: white;
+    border-radius: 25px;
 }
 
 #LOSE {

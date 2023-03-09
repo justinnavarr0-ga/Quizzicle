@@ -3,7 +3,7 @@
  This is a quiz game implemented using the basic fundamentals of HTML, CSS and JavaScript. 
  In order to understand how this quiz game is played, below is the description.
 
-**Game Description: ***
+**Game Description: **
 Player will be given a series of questions related to JavaScript and must identify the correct answer to each one. 
 
 The only way to proceed to the next question is to answer correctly on the first try.

@@ -42,3 +42,70 @@ The only way to win is to answer correctly on the first try.
 
  ![FINISHED GAMEPLAY (WIN)](https://user-images.githubusercontent.com/107282884/224140573-1fcdec76-b9b3-490d-b2bd-4dd76b4c42c4.gif)
 
+## Problems faced:
+
+One of the first problems I encountered writing this code was with the structure of my questions. 
+
+Initially I structured my questions to be like this:
+
+```
+{
+    content: "Which of the following choices is NOT a primitive data type?",
+    choices:[
+            {text: "Boolean", rightAnswer: false }, 
+            {text: "Null", rightAnswer: false },
+            {text: "Undefined", rightAnswer: false },
+            {text: "Array", rightAnswer: true }
+            ]
+},
+```
+
+However, I could not figure out how to code the event listener to check if that rightAnswer property was true or false. 
+
+I was stuck on this for an entire work day and after just reviewing what we learned I realized it would be easier to compare the values of Strings to one another. 
+
+**I ended up structuring the questions like this:**
+
+```
+{
+    content: "Which of the following choices is NOT a primitive data type?",
+    choices: ["Boolean", "Null","Undefined", "Array"],
+    answer: "Array"
+},
+```
+
+This ended up being a better way to code it because if you were to inspect the game using code from the first code block, you would be able to find out the answer to the question, which defeats the purpose of the game.
+
+##
+
+Another problem I faced when writing this code was I tried to add an event listener and its function outside of this renderQuestion function because I was trying to group my eventListeners all together.
+
+However, I realized I could not reference back to the values of the elements inside these buttons when coding the addEventListener function. 
+
+It took me a while to realize I had to code the eventListener function inside the  renderQuestion function since the variables I used to compare the answers and choices were inside of the renderQuestion function which was creating those same buttons.  
+
+```function renderQuestion () {
+    currentQuestion = currentQuestion + 1
+    display.innerHTML = questions[currentQuestion].content
+//this was the hardest part for me to code
+    let choicesArray = questions[currentQuestion].choices
+        choicesArray.forEach((choice) => {
+        let buttonEl =  document.createElement('button')
+        buttonEl.innerText = choice
+        buttonEl.classList.add("button")
+        buttons.append(buttonEl)
+//this was the second hardest part for me to code
+        buttonEl.addEventListener('click', checkQuestionValue => {
+            
+            let answer = questions[currentQuestion].answer
+            if (choice === answer){
+                iterateQ();
+                if (currentQuestion + 1 >= (questions.length)){
+                    renderWin()
+                }
+            } else {
+                renderLoss()
+            }
+        })
+        
+    })```

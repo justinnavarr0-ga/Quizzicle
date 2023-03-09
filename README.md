@@ -1,6 +1,7 @@
 ![a6696fe73975df391bc9af9871588865](https://user-images.githubusercontent.com/107282884/224126307-ecb20668-dc32-43a3-b502-032377383f9f.png)
 
-https://justinnavarr0-ga.github.io/Quizzicle/
+[Click HERE to test out your JavaScript knowledge](https://justinnavarr0-ga.github.io/Quizzicle/)
+
 
 ## **Game Description:**
 
@@ -86,7 +87,8 @@ However, I realized I could not reference back to the values of the elements ins
 
 It took me a while to realize I had to code the eventListener function inside the  renderQuestion function since the variables I used to compare the answers and choices were inside of the renderQuestion function which was creating those same buttons.  
 
-```function renderQuestion () {
+```
+function renderQuestion () {
     currentQuestion = currentQuestion + 1
     display.innerHTML = questions[currentQuestion].content
 //this was the hardest part for me to code
@@ -110,4 +112,46 @@ It took me a while to realize I had to code the eventListener function inside th
             }
         })
         
-    })```
+    })
+```
+
+## Technologies Used:
+- HTML
+- CSS
+- Vanilla Javascript
+
+## **Roadmap:**
+
+
+Icebox features planned for the near future:
+
+- In game Sound effects for 
+     
+    -_Button clicking_
+
+    -_Winning the game_
+
+    -_Losing/Restarting the game_
+
+- Ominous Background Music 
+- Transitioning effects between questions
+- A visual confirmation that you answered the question correctly
+
+## Contributing:
+
+Feel free to use this themed quiz code and alter the questions to fit your needs. 
+
+## Authors and Acknowledgements
+
+- Me
+
+
+- Resources I used for the CSS of this project:
+
+    [Confetti Effect](https://discourse.webflow.com/t/add-falling-confetti-with-css/103687)
+
+    [Fading In Invitation Effect](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ )
+
+    [Typewriter Text Effect](https://css-tricks.com/snippets/css/typewriter-effect/)
+
+##

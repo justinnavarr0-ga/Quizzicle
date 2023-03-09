@@ -1,32 +1,47 @@
   /*----- constants -----*/
-  //maybe put some music ??
-  //1. create questions for game as objects 
-
    let display = document.getElementById('CONTENT')
    let START = document.getElementById('START')
    let RESTART = document.getElementById('RESTART')
    let buttons = document.getElementById('buttons')
    let LOSE = document.getElementById("LOSE")
+   let container = document.getElementById("container")
    let currentQuestion = 0
 
 
 const outcomes = [  {content: "WRONG ANSWER"},
-                    {content: "Congratulations, you won!!! Heres ur prize money"}
+                    {content: "Congratulations, you won!!! You get to keep your life and Javascript knowledge!"}
                  ];
 
-
-
 const questions = [{
-    content: "You have been invited to participate in The SQUI- i mean The JAVASCRIPT QUIZ game. In this game you will only have ONE CHANCE to get through a series of questions. Any wrong answers shall result in you being  immediately terminated. The reward is extremely valuable Javascript knowledge that will help you for years to come. Press the invitation if you dare.",
-    choices: ["square","right answer","triangle","xxxxxxx"],
+    content: "Your invitation will be ariving shortly."
     }, 
     {
-        content: "Which of the following is NOT a primitive data type?",
+    content: "You have been chosen to participate in The SQUI- i mean The JAVASCRIPT QUIZ game.",
+    choices: ["CONTINUE"],
+    answer: "CONTINUE"
+    },
+    {
+    content: "You will only have ONE CHANCE to get through a series of questions.",
+    choices: ["CONTINUE"],
+    answer: "CONTINUE"
+    },
+    {
+    content: "If you fail, you will be terminated",
+    choices: ["CONTINUE"],
+    answer: "CONTINUE"
+    },
+    { //intro over
+        content: "Checkpoint has been created. Start Quiz now?",
+        choices: ["START QUIZ"],
+        answer: "START QUIZ"
+    }, 
+    {
+        content: "Which of the following choices is NOT a primitive data type?",
         choices: ["Boolean", "Null","Undefined", "Array"],
         answer: "Array"
     },
     {
-        content: "Which of the following is NOT an Object?",
+        content: "Which of the following choices is NOT a JavaScript Object?",
         choices: ["Date","String","Function","Error"],
         answer: "String"
     },
@@ -41,14 +56,14 @@ const questions = [{
         answer: "for...in"
     },
     {
-        content: "What can Classes be used for in OOP?",
-        choices: ["create objects","school","Whats OOP?","to learn"],
+        content: "What can classes be used for in OOP?",
+        choices: ["create objects","school","Encapsulation","Instantiation"],
         answer: "create objects"
     },
     {
         content: "What is the process of creating an object?",
-        choices: ["instantiation","instantiate","instance","instant oatmeal"],
-        answer: "instantiation"
+        choices: ["Instantiation","instantiate","instance","instant oatmeal"],
+        answer: "Instantiation"
     },
     {
         content: "What is an object created by a class?",
@@ -81,7 +96,7 @@ const questions = [{
  //code event listener for the button div 
 
  START.addEventListener('click', renderQuestion)
- RESTART.addEventListener('click', init)
+ RESTART.addEventListener('click', Checkpoint)
  
   /*----- functions -----*/
  init ();
@@ -90,6 +105,17 @@ const questions = [{
 function init() {
     currentQuestion = 0
     renderInitial ();
+}
+
+function Checkpoint() {
+    RESTART.style.display = "none"
+    buttons.style.display = "none"
+    LOSE.style.display = "none"
+    document.body.style.backgroundColor = "white"
+    container.classList.add("hidden")
+    buttons.innerHTML = ""
+    currentQuestion = 3
+    renderQuestion ();
 }
 
 //need function that iterates through questions array when true is clicked
@@ -101,7 +127,7 @@ function iterateQ () {
 function renderQuestion () {
     currentQuestion = currentQuestion + 1
     display.innerHTML = questions[currentQuestion].content
-
+//this was the hardest part for me to code
     let choicesArray = questions[currentQuestion].choices
         choicesArray.forEach((choice) => {
         let buttonEl =  document.createElement('button')
@@ -141,6 +167,7 @@ function renderInitial () {
     buttons.style.display = "none"
     LOSE.style.display = "none"
     document.body.style.backgroundColor = "white"
+    container.classList.add("hidden")
 }
 
 function renderLoss () {
@@ -156,4 +183,5 @@ function renderWin () {
     RESTART.style.display = "flex"
     START.style.display = "none"
     buttons.style.display = "none"
+    container.classList.remove("hidden")
 }

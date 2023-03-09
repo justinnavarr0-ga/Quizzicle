@@ -1,4 +1,4 @@
-  /*----- constants -----*/
+/*----- constants -----*/
    let display = document.getElementById('CONTENT')
    let START = document.getElementById('START')
    let RESTART = document.getElementById('RESTART')
@@ -8,11 +8,11 @@
    let currentQuestion = 0
 
 
-const outcomes = [  {content: "WRONG ANSWER"},
+    const outcomes = [  {content: "WRONG ANSWER"},
                     {content: "Congratulations, you won!!! You get to keep your life and Javascript knowledge!"}
                  ];
 
-const questions = [{
+    const questions = [{
     content: "Your invitation will be ariving shortly."
     }, 
     {
@@ -30,7 +30,7 @@ const questions = [{
     choices: ["CONTINUE"],
     answer: "CONTINUE"
     },
-    { //intro over
+    {
         content: "Checkpoint has been created. Start Quiz now?",
         choices: ["START QUIZ"],
         answer: "START QUIZ"
@@ -90,24 +90,22 @@ const questions = [{
         choices: ["Kenneth","Matthew","Payne", "Evan", "They are all great!!!", "None of them"],
         answer: "They are all great!!!"
     }
-]
+                 ]
 
-  /*----- event listeners -----*/
- //code event listener for the button div 
-
+/*----- event listeners -----*/
  START.addEventListener('click', renderQuestion)
  RESTART.addEventListener('click', Checkpoint)
  
-  /*----- functions -----*/
+/*----- functions -----*/
  init ();
 
-// create initialize function (make sure its called)
-function init() {
-    currentQuestion = 0
-    renderInitial ();
-}
 
-function Checkpoint() {
+ function init() {
+        currentQuestion = 0
+        renderInitial ();
+ }
+
+ function Checkpoint() {
     RESTART.style.display = "none"
     buttons.style.display = "none"
     LOSE.style.display = "none"
@@ -116,18 +114,16 @@ function Checkpoint() {
     buttons.innerHTML = ""
     currentQuestion = 3
     renderQuestion ();
-}
+ }
 
-//need function that iterates through questions array when true is clicked
-function iterateQ () {
+ function iterateQ () {
     buttons.innerHTML = ""
     renderQuestion(currentQuestion)
-}
+ }
 
-function renderQuestion () {
+ function renderQuestion () {
     currentQuestion = currentQuestion + 1
     display.innerHTML = questions[currentQuestion].content
-//this was the hardest part for me to code
     let choicesArray = questions[currentQuestion].choices
         choicesArray.forEach((choice) => {
         let buttonEl =  document.createElement('button')
@@ -149,15 +145,12 @@ function renderQuestion () {
         })
         
     })
+ START.style.display = "none";
+ RESTART.style.display = "none";
+ buttons.style.display = "grid"
+ }
 
-    START.style.display = "none";
-    RESTART.style.display = "none";
-    buttons.style.display = "grid"
-}
-
-//game restart functions
-//when game starts up calls this function
-function renderInitial () {
+ function renderInitial () {
     var currentQuestion = 0;
     buttons.innerHTML = ""
     display.innerHTML = questions[currentQuestion].content 
@@ -168,20 +161,20 @@ function renderInitial () {
     LOSE.style.display = "none"
     document.body.style.backgroundColor = "white"
     container.classList.add("hidden")
-}
+ }
 
-function renderLoss () {
+ function renderLoss () {
     display.innerHTML = outcomes[0].content 
     START.style.display = "none"
     RESTART.style.display = "flex"
     buttons.style.display = "none"
     LOSE.style.display = "flex"
     document.body.style.backgroundColor = "red"
-}
-function renderWin () {
+ }
+ function renderWin () {
     display.innerHTML = outcomes[1].content;
     RESTART.style.display = "flex"
     START.style.display = "none"
     buttons.style.display = "none"
     container.classList.remove("hidden")
-}
+ }

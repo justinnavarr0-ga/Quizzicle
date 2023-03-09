@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -7,21 +6,15 @@
     margin-top: 150px;
 }
 
-#navbar {
-    display: flex;
-    justify-content: center;
-}
-
 h1, h2 {
     text-align: center;
 }
 
-body {
+#navbar, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 main {
@@ -50,6 +43,7 @@ main {
     width: 9rem;
     border-radius: 0;
 }
+
 #START:hover{
     width: 30rem;
     height: 15rem;
@@ -153,11 +147,11 @@ background-color: #020202; left: 90%; animation-delay: -3.5s;
 
 
 @keyframes confetti {
-0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
-25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
-50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
-75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
-100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+    50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+    75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+    100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
 }
 
 /* found this cool code to fade items too */

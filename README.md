@@ -31,6 +31,7 @@ The only way to win is to answer correctly on the first try.
  ![Startup PROJECT 1 GIF](https://user-images.githubusercontent.com/107282884/224135780-5098a53a-aa7e-4529-a760-44ba5763ad3a.gif)
  
  **Question 1 Screen:**
+ ![Screenshot 2023-03-09 at 11 53 04 AM](https://user-images.githubusercontent.com/107282884/224142612-2ad23e42-c520-4897-a3b1-4d2330ffd8d7.png)
 
 
 **Losing Screen:**

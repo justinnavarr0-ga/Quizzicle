@@ -74,7 +74,7 @@ I was stuck on this for an entire work day and after just reviewing what we lear
 },
 ```
 
-This ended up being a better way to code it because if you were to inspect the game using code from the first code block, you would be able to find out the answer to the question, which defeats the purpose of the game.
+This ended up being a better way to code it because it was simple and cleaner. Also if you were to inspect the game using code from the first code block, you would be able to find out the answer to the question, which defeats the purpose of the game.
 
 ##
 

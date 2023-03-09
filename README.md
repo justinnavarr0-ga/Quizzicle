@@ -65,7 +65,9 @@ Initially I structured my questions to be like this:
 
 However, I could not figure out how to code the event listener to check if that rightAnswer property was true or false. 
 
-I was stuck on this for an entire work day and after just reviewing what we learned I realized it would be easier to compare the values of Strings to one another. 
+I was stuck on this for an entire work day and after just reviewing what I learned I had to attempt a method I understood better.
+
+I realized it would be easier to compare the values of Strings to one another. 
 
 **I ended up structuring the questions like this:**
 
@@ -143,15 +145,23 @@ Feel free to use this themed quiz code and alter the questions to fit your needs
 
 ## Authors and Acknowledgements
 
+Authors:
+
 - Me
 
+Acknowledgements: 
+- Kenneth C. (Lead Instructor)
+- Matthew G. 
+- Evan M.
+- Payne F.
 
-- Resources I used for the CSS of this project:
 
-    [Confetti Effect](https://discourse.webflow.com/t/add-falling-confetti-with-css/103687)
+Resources I used for the CSS of this project:
 
-    [Fading In Invitation Effect](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ )
+- [Confetti Effect](https://discourse.webflow.com/t/add-falling-confetti-with-css/103687)
 
-    [Typewriter Text Effect](https://css-tricks.com/snippets/css/typewriter-effect/)
+- [Fading In Invitation Effect](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/ )
+
+- [Typewriter Text Effect](https://css-tricks.com/snippets/css/typewriter-effect/)
 
 ##

@@ -1,5 +1,7 @@
 ![a6696fe73975df391bc9af9871588865](https://user-images.githubusercontent.com/107282884/224126307-ecb20668-dc32-43a3-b502-032377383f9f.png)
 
+https://justinnavarr0-ga.github.io/Quizzicle/
+
 ## **Game Description:**
 
 This is a quiz game implemented by using the fundamentals of HTML, CSS and JavaScript.

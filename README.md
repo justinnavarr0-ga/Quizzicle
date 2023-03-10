@@ -125,7 +125,28 @@ function renderQuestion () {
         })
         
     })
+}
 ```
+Lastly, with the code above, I noticed the function for the questions only worked if I had a repeat of the last question for it to skip over.
+
+```js
+buttonEl.addEventListener('click', checkQuestionValue => {
+            
+            let answer = questions[currentQuestion].answer
+            if (choice === answer){
+                iterateQ();
+                if (currentQuestion = (questions.length + 1)){
+                    renderWin()
+                }
+            } else {
+                renderLoss()
+            }
+        })
+        
+```
+This ended up being a better code to call the renderWin function without needing to repeat the last question. 
+
+
 
 ## Technologies Used:
 - HTML

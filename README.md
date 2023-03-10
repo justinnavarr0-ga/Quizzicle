@@ -2,6 +2,8 @@
 
 <div align = "center">
 
+![giphy](https://user-images.githubusercontent.com/107282884/224192998-1d9eb325-fc41-4bbf-ada0-02a0429c46a8.gif)
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -10,9 +12,6 @@
 ![ANIME](https://img.shields.io/badge/Crunchyroll-F47521?style=for-the-badge&logo=crunchyroll&logoColor=white)
 ![NETFLIX](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white)
 
-![JAKEEE](https://user-images.githubusercontent.com/107282884/224192439-812a1ecb-bd6a-4bca-9d02-223e11c5835a.gif)
-![JAKEEE](https://user-images.githubusercontent.com/107282884/224192439-812a1ecb-bd6a-4bca-9d02-223e11c5835a.gif)
- 
 [Click HERE to test out your JavaScript knowledge](https://justinnavarr0-ga.github.io/Quizzicle/)
 
 </div>

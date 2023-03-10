@@ -130,21 +130,44 @@ function renderQuestion () {
 Lastly, with the code above, I noticed the function for the questions only worked if I had a repeat of the last question for it to skip over.
 
 ```js
-buttonEl.addEventListener('click', checkQuestionValue => {
+ function iterateQ () {
+ if (currentQuestion >= (questions.length) - 1){
+    renderWin()
+ } else {
+    buttons.innerHTML = ""
+    renderQuestion(currentQuestion)
+ }
+}
+
+ function renderQuestion () {
+    currentQuestion = currentQuestion + 1
+    display.innerHTML = questions[currentQuestion].content
+    let choicesArray = questions[currentQuestion].choices
+        choicesArray.forEach((choice) => {
+        let buttonEl =  document.createElement('button')
+        buttonEl.innerText = choice
+        buttonEl.classList.add("button")
+        buttons.append(buttonEl)
+
+        buttonEl.addEventListener('click', checkQuestionValue => {
             
             let answer = questions[currentQuestion].answer
             if (choice === answer){
                 iterateQ();
-                if (currentQuestion = (questions.length + 1)){
-                    renderWin()
-                }
             } else {
                 renderLoss()
             }
         })
         
+    })
+ START.style.display = "none";
+ RESTART.style.display = "none";
+ buttons.style.display = "grid"
+ }
+
+        
 ```
-This ended up being a better code to call the renderWin function without needing to repeat the last question. 
+My solution to this right now was adding a conditional statement to the function that iterates over the questions. This is actually a more reusable code to call the renderWin function without needing to have a pointless repeat of the last question. 
 
 
 

@@ -93,8 +93,6 @@
  
 /*----- functions -----*/
  init ();
-
-
  function init() {
         currentQuestion = 0
         renderInitial ();

@@ -85,12 +85,7 @@
         choices: ["Kenneth","Matthew","Payne", "Evan", "They are all great!!!", "None of them"],
         answer: "They are all great!!!"
     },
-    {
-        content: "The BEST INSTRUCTOR IS.....",
-        choices: ["Kenneth","Matthew","Payne", "Evan", "They are all great!!!", "None of them"],
-        answer: "They are all great!!!"
-    }
-                 ]
+    ]
 
 /*----- event listeners -----*/
  START.addEventListener('click', renderQuestion)
@@ -117,9 +112,13 @@
  }
 
  function iterateQ () {
+ if (currentQuestion >= (questions.length) - 1){
+    renderWin()
+ } else {
     buttons.innerHTML = ""
     renderQuestion(currentQuestion)
  }
+}
 
  function renderQuestion () {
     currentQuestion = currentQuestion + 1
@@ -136,9 +135,6 @@
             let answer = questions[currentQuestion].answer
             if (choice === answer){
                 iterateQ();
-                if (currentQuestion + 1 >= (questions.length)){
-                    renderWin()
-                }
             } else {
                 renderLoss()
             }

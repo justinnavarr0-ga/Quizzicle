@@ -77,7 +77,9 @@ However, I could not figure out how to code the event listener to check if that 
 
 I was stuck on this for an entire work day and after just reviewing what I learned I had to attempt a method I understood better.
 
-I realized it would be easier to compare the values of Strings to one another. 
+<p align = "center"> **SHOUTOUT TO KENDALL** </p>
+
+After talking with him I realized it would be a lot easier to compare the values of Strings to one another. 
 
 **I ended up structuring the questions like this:**
 

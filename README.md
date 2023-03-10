@@ -9,7 +9,8 @@
 ![APPLE](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![ANIME](https://img.shields.io/badge/Crunchyroll-F47521?style=for-the-badge&logo=crunchyroll&logoColor=white)
 ![NETFLIX](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white)
- 
+
+![JakeTheDog](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white)
  
 [Click HERE to test out your JavaScript knowledge](https://justinnavarr0-ga.github.io/Quizzicle/)
 

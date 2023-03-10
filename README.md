@@ -12,10 +12,6 @@
 
 ![JAKEEE](https://user-images.githubusercontent.com/107282884/224192439-812a1ecb-bd6a-4bca-9d02-223e11c5835a.gif)
 ![JAKEEE](https://user-images.githubusercontent.com/107282884/224192439-812a1ecb-bd6a-4bca-9d02-223e11c5835a.gif)
-![JAKEEE](https://user-images.githubusercontent.com/107282884/224192439-812a1ecb-bd6a-4bca-9d02-223e11c5835a.gif)
-![JAKEEE](https://user-images.githubusercontent.com/107282884/224192439-812a1ecb-bd6a-4bca-9d02-223e11c5835a.gif)
-![JAKEEE](https://user-images.githubusercontent.com/107282884/224192439-812a1ecb-bd6a-4bca-9d02-223e11c5835a.gif)
-
  
 [Click HERE to test out your JavaScript knowledge](https://justinnavarr0-ga.github.io/Quizzicle/)
 
